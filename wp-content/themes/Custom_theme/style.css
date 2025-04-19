@@ -1,0 +1,716 @@
+/*
+Theme Name: Custom Theme
+Description: Our own Theme
+Author: Raunak
+Version: 1.0.0
+*/
+
+/* Top Bar Styling */
+/* 🌟 Full-Width Topbar */
+.topbar {
+    background: linear-gradient(to bottom, #3a0d0d 0%, #5a1a1a 100%);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    position: relative; /* Keeps it within normal document flow */
+    z-index: 1000; /* Ensures it's above other content */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌟 Container Inside Topbar */
+.topbar-container {
+    display: flex;
+    justify-content: space-between; /* Left & Right Alignment */
+    align-items: center;
+    width: 100%;
+    max-width: 1800px; /* Prevents stretching */
+    margin: 0 auto;
+}
+
+/* Ensure Left Side (Contact Info) Stays in One Line */
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between elements */
+    flex-wrap: nowrap; /* Prevents line break */
+}
+
+/* Style Each Contact Info (Phone, Email, Location) */
+.topbar-left span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topbar-left i {
+    color: white;
+    font-size: 16px;
+}
+
+.topbar-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.topbar-left a:hover {
+    text-decoration: underline;
+    color: #ffdd81;
+}
+
+/* Social Media Icons */
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.social-menu li {
+    margin-left: 15px;
+}
+
+.social-menu li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-menu li a:hover {
+    color: #ffdd81;
+}
+
+/* ========= RESPONSIVENESS =========== */
+
+/* 🔹 Small Screens (300px - 768px) → ONLY Social Media Icons Visible */
+@media (max-width: 768px) {
+    .topbar-container {
+        justify-content: space-between; /* Keeps layout balanced */
+        text-align: right;
+    }
+
+    .topbar-left {
+        display: none !important; /* Hide Contact Info */
+    }
+
+    .topbar-right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; /* Aligns icons to the right */
+        padding-right: 15px; /* Adds spacing from the right edge */
+    }
+
+    .social-menu {
+        display: flex;
+        justify-content: flex-end; /* Ensures icons stay on the right */
+        padding: 0;
+    }
+}
+
+
+
+/* 🌟 Main Header Styling (Increased Height & Full Width) */
+.main-header {
+    background: linear-gradient(to bottom, #5a1a1a 0%, #8a0808 50%, #dc3030 100%);
+    padding: 10px 0;
+    height: calc(80px + 50px); /* Increased height by 50px */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* 🌟 Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 15px;
+    height: 50px; /* Adjusted header height */
+}
+
+/* 🌟 Decorative Images (Left & Right) */
+.header-image {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Ensures images stay in their exact positions */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px; /* Adjust the size */
+}
+
+/* 🌟 Align Left Image to the Complete Left */
+.header-left {
+    left: 0;
+}
+
+/* 🌟 Align Right Image to the Complete Right */
+.header-right {
+    right: 0;
+}
+
+/* 🌟 Image Sizing */
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* 🌟 Donate Button Styling */
+.donate-button {
+    background-color: #df3b36;
+    color: white;
+    padding: 8px 20px; /* Increased button size */
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    margin-right: 80px;
+    margin-top: 50px;
+    margin-right: 100px;
+}
+
+.donate-button:hover {
+    background-color: #e3c30c;
+    color: maroon;
+}
+
+/* 🌟 Center Content (Logo + Title + Subtitle) */
+.header-content {
+    flex: 2;
+    text-align: center;
+}
+
+/* 🌟 Logo */
+.header-logo img {
+    width: 140px; /* Ensure the logo is fully visible */
+    height: auto;
+    margin-bottom: 0px;
+    margin-top: 40px;
+    margin-left:50px;
+}
+
+/* 🌟 Title & Subtitle (Proper Visibility) */
+.main-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #ffdd81;
+    margin: 0;
+    margin-left: 200px;
+    margin-top: 80px;
+    font-family: "Fira Sans", sans-serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); 
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.0rem;
+    color: #fff;
+    margin-top: 3px;
+    margin-left: 200px;
+    margin-top: 10px;
+    font-family: "Fira Sans", sans-serif;
+}
+
+
+
+/* 🌟 Responsive Design for 1024px & Below */
+@media (max-width: 1024px) {
+    .main-header {
+        height: 140px;
+        
+    }
+
+    .header-container {
+        flex-direction: row;
+    }
+
+
+    .main-title {
+        font-size: 1.8rem;
+        margin-left: 160px !important;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+        margin-left: 150px !important;
+    }
+
+    .donate-button {
+        display: block;
+        margin-right: 10px!important;
+    }
+
+    .header-image {
+        width: 80px; /* Reduce image size */
+    }
+    .header-image img{
+        margin-bottom: 60px;
+        margin-top: 0px;
+    }
+
+    .header-logo img {
+        width: 120px; 
+        margin-top: 70px!important;
+        margin-bottom: 80px;
+        margin-left: -20px!important;
+    }
+}
+
+
+/* 🌟 Responsive Design for 768px & Below (Logo Moves Above Title) */
+@media (max-width: 768px) {
+    .main-header {
+        height: 150px;
+       
+    }
+
+    .header-container {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .header-logo {
+        top: 5px; /* Move logo slightly up */
+    }
+
+    .header-image img{
+        margin-bottom: 100px;
+        margin-top: 0px;
+    }
+
+    .header-logo img {
+        width: 140px; /* Smaller logo */
+        margin-left: -20px;
+        margin-bottom: 0px;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+        margin-left: 180px;
+        margin-top: 90px;
+    }
+
+    .subtitle {
+        font-size: 1.0rem;
+        margin-left: 180px;
+        margin-top: 0px;
+    }
+    
+    .header-image {
+        width: 80px; /* Reduce image size */
+    }
+
+    .donate-button {
+        font-size: 18px;
+        margin-bottom:0px!important;
+        margin-top: 90px!important;
+        margin-right: 0px!important;
+    }
+
+    
+}
+
+/* 🌟 Responsive Design for 600px & Below */
+@media (max-width: 600px) {
+    .main-header {
+        height: 200px;
+        
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+
+    .main-title {
+        font-size: 1.8rem;
+        margin-left: 15px !important;
+        margin-top: 110px;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        margin-left: 20px !important;
+    }
+
+    .donate-button {
+        display: none;
+    }
+
+    .header-image {
+        width: 80px; /* Reduce image size */
+    }
+    .header-image img{
+        margin-bottom: 150px;
+        margin-top: 0px;
+    }
+
+    .header-logo img {
+        width: 140px; 
+        margin-top: 30px!important;
+        margin-bottom: 120px;
+        margin-left: 110px!important;
+    }
+}
+
+
+/* 🌟 Responsive Design for 480px & Below */
+@media (max-width: 480px) {
+    .main-header {
+        height: 200px;
+        
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+
+    .main-title {
+        font-size: 1.4rem;
+        margin-left: 15px !important;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+        margin-left: 20px !important;
+    }
+
+    .donate-button {
+        display: none;
+    }
+
+    .header-image {
+        width: 50px; /* Reduce image size */
+    }
+    .header-image img{
+        margin-bottom: 150px;
+        margin-top: 0px;
+    }
+
+    .header-logo img {
+        width: 100px; 
+        margin-top: 0px!important;
+        margin-bottom: 120px;
+        margin-left: 80px!important;
+    }
+}
+
+
+/* 🌟 Responsive Design for 300px & Below */
+@media (max-width: 300px) {
+    .main-header {
+        padding: 5px 0;
+    }
+
+    .header-logo img {
+        width: 45px;
+    }
+
+    .main-title {
+        font-size: 1.2rem;
+    }
+
+    .subtitle {
+        font-size: 0.7rem;
+    }
+
+    .donate-button {
+        font-size: 10px;
+        padding: 4px 12px;
+    }
+
+    .header-image {
+        width: 40px; /* Further reduce image size */
+    }
+}	
+
+
+
+/* 🌟 Header Menu */
+
+.header_menu{
+    width:100%;
+    background-color: #ec3535;
+}
+
+.header-navigation {
+    background-color: #f26e10;
+    width: 96%;
+    margin: 0 auto; /* Centers the menu */
+    text-align: center;
+    padding: 5px 0;
+    border-top-left-radius: 40px; /* More rounded top corners */
+    border-top-right-radius: 40px;
+}
+
+/* 🌟 Main Menu Items */
+.header-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* 🌟 Top-Level Menu Items */
+.header-menu li{
+    position: relative;
+}
+
+.header-menu li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for Menu Items */
+.header-menu li:hover > a {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe18b;
+    border-radius: 5px;
+}
+
+/* 🌟 Dropdown Arrow */
+.dropdown-arrow {
+    font-size: 12px;
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 🌟 Rotate Arrow on Hover */
+.header-menu li:hover > a .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* 🌟 Submenu - Display Over Other Content */
+.header-menu li ul {
+    position:absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(to bottom, #b70404 0%, #6b0202 100%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 180px;
+    display: none;
+    z-index: 9999; /* Higher value to stay on top */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for better visibility */
+}
+
+/* 🌟 Submenu Items - Full Width & Separator */
+.header-menu li ul li {
+    width: 87%;
+    padding: 10px;
+    color: white;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Light shade separator */
+}
+
+
+/* 🌟 Show Submenu on Hover */
+.header-menu li:hover > ul {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🌟 Submenu Items */
+.header-menu li ul li a {
+    padding: 10px 15px;
+    color: white;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+/* 🌟 Hover Effect for Submenu */
+.header-menu li ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffcc5c;
+}
+
+.menu_word{
+    display:none;
+}
+
+.menu-toggle{
+    display:none;
+}
+
+
+/* 🌟 Responsive - For Screens 750px and Below */
+@media (max-width: 750px) {
+    .header-navigation {
+        width: 90%;
+        height: 40px;
+        position: relative;
+    }
+
+    .header-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        background-color: #f26e10;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: auto;
+        z-index: 999;
+        padding: 5px 0;
+        overflow: hidden;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 1.0); /* Subtle shadow for depth */
+    }
+
+    .header-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamberger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu_word {
+        padding-bottom: 10px;
+        display: block;
+        text-align: left;
+        padding-left: 20px;
+        color: whitesmoke;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 500;
+    }
+
+    /* Style Hamburger Button */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: rgb(255, 255, 255);
+        margin: 3px 0;
+    }
+    
+
+    /* 🌟 Style Menu Items */
+    .header-menu li {
+        list-style: none;
+        position: relative;
+    }
+
+    .header-menu li a {
+        display: block;
+        padding: 2px 2px;
+        text-decoration: none;
+        color: whitesmoke;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 500;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .header-menu li ul{
+        position: relative;
+    }
+
+    /* 🌟 Add Separator Between Menu Items */
+    .header-menu li:not(:last-child)::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1.5px;
+        background-color: rgba(255, 171, 93, 0.8); /* Light orange line */
+
+    }
+
+    /* 🌟 Hover Effect */
+    .header-menu li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* 🔹 Submenu Styling */
+    .sub-menu {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        background: rgba(255, 0, 0, 0.2);
+        padding: 5px 0;
+        margin-top: 5px;
+        position: relative; /* Allows it to take up space */
+        width: 100%;
+    }
+
+    /* 🔹 Active Submenu Should Push Items Down */
+    .submenu-active {
+        display: block !important; /* Makes submenu visible */
+    }
+
+    /* 🔹 Highlight Active Menu Item */
+    .menu-item-has-children.active > a {
+        background-color: rgba(105, 3, 3);
+        color: white;
+    }
+
+    /* 🔹 Style Submenu Items */
+    .sub-menu .menu-item {
+        padding:2px 2px;
+        background: rgb(105, 3, 3);
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        width: 200%;
+        text-align: center;
+    }
+
+    .sub-menu .menu-item a {
+        color: white;
+        text-decoration: none;
+        text-align: left;
+    }
+
+    .sub-menu .menu-item:hover {
+        background-color: rgba(255, 0, 0, 0.8);
+    }
+
+}
+
+
+
+

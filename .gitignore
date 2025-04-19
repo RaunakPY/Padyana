@@ -1,0 +1,17 @@
+# Ignore WordPress core files (optional if you're using version control only for custom theme/plugin)
+wp-admin/
+wp-includes/
+
+# Ignore sensitive and dynamic files
+wp-config.php
+wp-content/uploads/
+
+# Ignore system/IDE files
+.DS_Store
+*.log
+*.sql
+*.sqlite
+
+# Node and vendor dependencies
+node_modules/
+vendor/
